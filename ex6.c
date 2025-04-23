@@ -1,17 +1,20 @@
 #include <stdio.h>
+#include "igualdade.h"
 
-double diametro(double raio) {
-    return 2 * raio;
+int recebeNumero() {
+	int numero;
+	printf("Digite um numero: ");
+	scanf("%d", &numero);
+	return numero;
 }
 
 int main() {
-    double raio, resultado;
+	int num1 = recebeNumero();
+	int num2 = recebeNumero();
+	int num3 = recebeNumero();
 
-  printf("Informe o valor do raio do círculo para calcular o diâmetro: ");
-    scanf("%lf", &raio);
+	int maiorNumero = maior(maior(num1, num2), num3);
 
-   resultado = diametro(raio);
-    printf("O diâmetro do círculo é: %.2lf\n", resultado);
-
-return 0;
+	printf("O maior numero e: %d\n", maiorNumero);
+	return 0;
 }
